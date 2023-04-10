@@ -1,0 +1,18 @@
+<div class="container-fuild">
+    <h3>More Details</h3>
+    <dl>
+        <dt>Preview</dt>
+        <dd>
+            <img [src]="product.image" width="200" height="200">
+        </dd>
+        <dt>Rating</dt>
+        <dd>
+            <span class="bi bi-star-fill text-success"></span>{{product.rating.rate}}
+            | [<span class="text-warning">{{product.rating.count}}</span>]
+        </dd>
+        <dt>Description</dt>
+        <dd style="height: 100px; overflow: auto;">
+            <p align="justify"> {{product.description}}</p>
+        </dd>
+    </dl>
+</div>

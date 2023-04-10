@@ -1,0 +1,11 @@
+<div class="conatiner-fuild">
+    <h2 class="text-center">{{CateriesName|titlecase}} Products</h2>
+    <ol>
+        <li *ngFor="let item of Products">
+            <a routerLink="/details/{{item.id}}"> {{item.title}}</a>
+        </li>
+    </ol>
+    <div>
+        <a routerLink="/categories">Back to Categories</a>
+    </div>
+</div>

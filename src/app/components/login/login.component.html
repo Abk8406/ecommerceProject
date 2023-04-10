@@ -1,0 +1,14 @@
+<div class="container-fuild">
+    <form class="w-25" #frmLogin="ngForm" (submit)="LoginClick(frmLogin.value)">
+        <h2 class="text-center">Login </h2>
+        <dl>
+            <dt>User Id</dt>
+            <dd><input #UserId="ngModel" ngModel name="UserId" type="text" class="form-control mt-2"></dd>
+            <dt>Password</dt>
+            <dd><input #Password="ngModel" ngModel name="Password" type="password" class="form-control mt-2"></dd>
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+        </dl>
+    </form>
+
+    <h4><a routerLink="/register">New User? Register</a></h4>
+</div>

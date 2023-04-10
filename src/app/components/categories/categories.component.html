@@ -1,0 +1,13 @@
+<div class="conatiner-fuild">
+    <div class="d-flex justify-content-around">
+        <div>
+            <h2 class="text-center"> Welcome to Categroies List | <span> {{UserId}}</span> </h2>
+        </div>
+        <div>
+            <button (click)="RemoveClick()" class="btn btn-outline-dark">SignOut</button>
+        </div>
+    </div>
+    <ol class="list-unstyled" class="mt-3">
+        <li *ngFor="let item of Categories"><a routerLink="/products/{{item}}">{{item|titlecase}}</a></li>
+    </ol>
+</div>

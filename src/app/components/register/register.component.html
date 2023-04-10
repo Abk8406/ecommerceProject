@@ -1,0 +1,36 @@
+<div class="container-fuild">
+    <form class="w-25" #frmRegister="ngForm" (submit)="RegisterClick(frmRegister.value)">
+        <h3>Register User</h3>
+        <dl>
+            <dt>User Id</dt>
+            <dd>
+                <input type="text" (keyup)="verifyUser($event)" ngModel #UserId="ngModel" name="UserId"
+                    class="form-control">
+            </dd>
+            <dd [ngClass]="ErrorClass">
+                {{userError}}
+            </dd>
+            <dt>User Name</dt>
+            <dd>
+                <input type="text" ngModel #UserName="ngModel" name="UserName" class="form-control">
+            </dd>
+            <dt>Password</dt>
+            <dd>
+                <input type="password" ngModel #Password="ngModel" name="Password" class="form-control">
+            </dd>
+            <dt>Age</dt>
+            <dd>
+                <input type="number" ngModel #Age="ngModel" name="Age" class="form-control">
+            </dd>
+            <dt>Email</dt>
+            <dd>
+                <input type="email" ngModel #Email="ngModel" name="Email" class="form-control">
+            </dd>
+            <dt>Mobile</dt>
+            <dd>
+                <input type="text" ngModel #Mobile="ngModel" name="Mobile" class="form-control">
+            </dd>
+        </dl>
+        <button class="btn btn-danger">Register</button>
+    </form>
+</div>
